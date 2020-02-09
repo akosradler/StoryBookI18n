@@ -1,6 +1,13 @@
-import * as React from 'react'
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import * as React from "react";
+
+import Layout from "../components/Layout";
+import Link from "next/link";
+import List from "../components/List";
+
+const data = [
+  { id: 1, name: "toBeTranslatedA" },
+  { id: 2, name: "toBeTranslatedB" }
+];
 
 const AboutPage: React.FunctionComponent = () => (
   <Layout title="About | Next.js + TypeScript Example">
@@ -10,8 +17,9 @@ const AboutPage: React.FunctionComponent = () => (
       <Link href="/">
         <a>Go home</a>
       </Link>
+      <List items={data} />
     </p>
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;
